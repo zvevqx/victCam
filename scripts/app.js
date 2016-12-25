@@ -21,6 +21,7 @@ var w = window,
     function downloadCanvas(link, canvasId, filename) {
         link.href = document.getElementById(canvasId).toDataURL();
         link.download = filename;
+        console.log(link.download);
     }
 
     document.getElementById('download').addEventListener('click', function() {
