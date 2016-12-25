@@ -1,6 +1,7 @@
 
 var input = document.querySelector('input[type=file]');
 var canvas = document.getElementById('ImgCan');
+var snpBtn = document.getElementById('btnSnapshot');
 var img ;
 var frameFilter = new Image();
 frameFilter.src = "images/frame.png";
@@ -23,16 +24,20 @@ input.onchange = function () {
   
   img = new Image();
   img.src=imgURL;
-  console.log(file.height);
+ // console.log(file.height);
  
   img.onload =function(){
-    canvas.height = y;
+    var imgRatio = img.height/img.width;
+   // alert(imgRatio);
     canvas.width = x;
+    canvas.height = canvas.width*imgRatio;
+
   	context.drawImage(img, 0, 0, img.width, img.height ,
-                           0, 0, canvas.width, canvas.height);
+                           0, 0, canvas.width, canvas.width*imgRatio);
 
     context.drawImage(frameFilter, 0, 0, frameFilter.width, frameFilter.height ,
                              0, 0, canvas.width, canvas.height);
+    snpBtn.addClass('retake');
 
   }
   // upload(file);
