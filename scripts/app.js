@@ -17,6 +17,18 @@ var w = window,
 
 
 
+
+    function downloadCanvas(link, canvasId, filename) {
+        link.href = document.getElementById(canvasId).toDataURL();
+        link.download = filename;
+    }
+
+    document.getElementById('download').addEventListener('click', function() {
+        downloadCanvas(this, 'ImgCan', 'selphie.png');
+    }, false);
+
+
+
 input.onchange = function () {
   var file = input.files[0];
   //console.log(file);
@@ -37,7 +49,7 @@ input.onchange = function () {
 
     context.drawImage(frameFilter, 0, 0, frameFilter.width, frameFilter.height ,
                              0, 0, canvas.width, canvas.height);
-    snpBtn.addClass('retake');
+    snpBtn.setAttribute('class','retake');
 
   }
   // upload(file);
@@ -46,6 +58,18 @@ input.onchange = function () {
 
 
 
+
+
+
+
+
+  // function convertCanvasToImage(canvas) {
+  //   var image = new Image();
+  //   image.src = canvas.toDataURL("image/png");
+  //   console.log(image);
+  //   return image;
+
+  // }
 
 // function displayAsImage(file) {
 //   var imgURL = URL.createObjectURL(file),
