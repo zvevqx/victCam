@@ -48,9 +48,10 @@ body {
   width: 100%;
   height: 25px;
   color: #FFF;
-  background: #3F51B5;
+  background: #111;
   position: fixed;
   font-size: 20px;
+  text-align: center;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 9px 1px rgba(0, 0, 0, 0.12), 0 4px 2px -2px rgba(0, 0, 0, 0.2);
   padding: 5px 5px 0 5px;
   will-change: transform;
@@ -103,10 +104,13 @@ body {
   font-weight: 400;
   font-size: 20px;
   margin: 0;
-  -webkit-box-flex: 1;
+  display: block;
+  margin: auto;
+ /* -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
-          flex: 1; }
+          flex: 1;*/
+  }
 
 .main {
   padding-top: 30px;
@@ -155,7 +159,7 @@ button[type=file] {
   display: block;
   padding: 10px;
   margin: auto;
-  background: url(../images/icoApn.png) center center no-repeat  red;
+  background: url(../images/snap.png) center center no-repeat  #e74c3c;
   background-size: 50%;
   border-radius: 50%;
   position: relative;
@@ -164,16 +168,14 @@ button[type=file] {
 
 
 .inputfile + label.retake {
-  width:100px;
+  width:30px;
   height:30px;
   /* font-size: 1.25rem; */
   /* font-weight: 700; */
   cursor: pointer;
   display: inline-block;
-  padding: 10px;
   margin: auto;
-  background: url(../images/icoApn.png) center center no-repeat  red;
-  background-size: 20%;
+  background-size: 60%;
   border-radius: 5%;
   position: relative;
 }
@@ -181,7 +183,7 @@ button[type=file] {
 
 .inputfile:focus + label,
 .inputfile + label:hover {
-    background-color: red;
+    background-color:  #c0392b;
 }
 
 .inputfile + label {
@@ -193,4 +195,19 @@ button[type=file] {
 }*/
 
 canvas{
+}
+
+
+span #download {
+  display: none;
+}
+
+
+span #download.show {
+  display: inline-block;
+  width: 50px!important;
+  height: 50px!important;
+  background: url(../images/dl.png) center center no-repeat  #3498db;
+  background-size: 50%;
+  border-radius: 5%;
 }

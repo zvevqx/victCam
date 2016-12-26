@@ -23,7 +23,7 @@
   <title>phone app test</title>
   <link rel="stylesheet" type="text/css" href="styles/inline.css">
   <!-- TODO add manifest here -->
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="manifest.json">
   <!-- Add to home screen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -39,8 +39,8 @@
 
   <header class="header">
     <h1 class="header__title">CAM TEST</h1>
-    <button id="butRefresh" class="headerButton" aria-label="Refresh"></button>
-    <button id="butAdd" class="headerButton" aria-label="Add"></button>
+    <!-- <button id="butRefresh" class="headerButton" aria-label="Refresh"></button> -->
+    <!-- <button id="butAdd" class="headerButton" aria-label="Add"></button> -->
   </header>
 
   <main class="main">
@@ -50,7 +50,7 @@
    <div class="box">
     <input type="file"  accept="video/*;capture=camera" name="file-1[]" id="file-1" class="inputfile inputfile-1"   capture/>
     <label for="file-1" class="" id="btnSnapshot"></label>
-    <a id="download">Download as image</a>
+    <span><a id="download" class=''> </a></span>
    </div>
   </main>
 

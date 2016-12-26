@@ -2,6 +2,7 @@
 var input = document.querySelector('input[type=file]');
 var canvas = document.getElementById('ImgCan');
 var snpBtn = document.getElementById('btnSnapshot');
+var dlBtn = document.getElementById('download');
 var img ;
 var frameFilter = new Image();
 frameFilter.src = "images/frame.png";
@@ -51,6 +52,7 @@ input.onchange = function () {
     context.drawImage(frameFilter, 0, 0, frameFilter.width, frameFilter.height ,
                              0, 0, canvas.width, canvas.height);
     snpBtn.setAttribute('class','retake');
+    dlBtn.setAttribute('class','show');
 
   }
   // upload(file);
