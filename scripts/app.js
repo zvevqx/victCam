@@ -5,7 +5,7 @@ var snpBtn = document.getElementById('btnSnapshot');
 var dlBtn = document.getElementById('download');
 var img ;
 var frameFilter = new Image();
-frameFilter.src = "images/frame.png";
+frameFilter.src = "images/flowersTest.png";
 context = canvas.getContext('2d');
 
 
